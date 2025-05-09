@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Contraseñas Seguras</title>
+  <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-  Hello world
+  <div class="container">
+    <h1>Generador de Contraseñas Seguras</h1>
+
+    <div class="controls">
+      <div class="form-group">
+       <div class="checkbox-group">
+        <label><input type="checkbox" id="mayusculas"> Incluir mayúsculas</label>
+        <label><input type="checkbox" id="numeros"> Incluir números</label>
+        <label><input type="checkbox" id="simbolos"> Incluir símbolos</label>
+       </div>
+      </div>
+      <div class="form-group">
+        <label for="longitud">Longitud:</label>
+        <input type="number" id="longitud" min="4" max="64" value="12" />
+        <div id="longitud-feedback" class="longitud-feedback"></div> <!-- Aquí irá el mensaje de advertencia -->
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="generar">Generar</button>
+      <button id="copiar">Copiar</button>
+    </div>
+
+    <div class="output" id="resultado">Tu contraseña aparecerá aquí</div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 
